@@ -1,7 +1,7 @@
 <?php
 /*
  *  @package   TinyMod
- *  @copyright Copyright (c)2022-2023 Nicholas K. Dionysopoulos
+ *  @copyright Copyright (c)2022-2023 Nicholas K. Dionysopoulos, Copyright (c)2025 Markus Bruhn
  *  @license   GNU General Public License version 3, or later
  */
 
@@ -24,27 +24,21 @@ abstract class Json
 	 */
 	public static function filter($text): string
 	{
-		if (!is_string($text))
-		{
+		if (!is_string($text)) {
 			return '';
 		}
 
-		if (empty(trim($text ?? '')))
-		{
+		if (empty(trim($text ?? ''))) {
 			return '';
 		}
 
-		try
-		{
+		try {
 			$parsed = @json_decode($text);
-		}
-		catch (JsonException $e)
-		{
+		} catch (JsonException $e) {
 			$parsed = null;
 		}
 
-		if (empty($parsed))
-		{
+		if (empty($parsed)) {
 			return '';
 		}
 

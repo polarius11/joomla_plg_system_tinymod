@@ -1,7 +1,3 @@
-# 🚨🚨 This repository is obsolete 🚨🚨
-
-Joomla! 5 uses TinyMCE 6. This plugin can't work with TinyMCE 6, and I have no use case for it anymore so I am not updating it.
-
 # TinyMCE Configuration Modifier for Joomla
 
 A system plugin to customise TinyMCE beyond what Joomla lets you do.
@@ -10,7 +6,7 @@ A system plugin to customise TinyMCE beyond what Joomla lets you do.
 
 ## Requirements
 
-* Joomla 4
+* Joomla 5
 * PHP 7.2 or later, including any PHP 8 version
 * Using Joomla's built-in TinyMCE editor plugin (duh!)
 
@@ -22,7 +18,7 @@ Edit the “System - TinyMCE Configuration Modifier”.
 
 The only option is an editor field where you can paste a JSON document with TinyMCE configuration options. Please consult the [TinyMCE configuration reference](https://www.tiny.cloud/docs/configure/).
 
-**IMPORTANT!** At the time of this writing, TinyMCE has published version 6 of their editor but Joomla 4 is only using TinyMCE 5. Please remember to select “TinyMCE v5” in the drop-down of the TinyMCE documentation to view the information which is relevant to the TinyMCE version Joomla is using.
+**IMPORTANT!** At the time of this writing, TinyMCE has published version 7 of their editor but Joomla 5 is only using TinyMCE 6. Please remember to select “TinyMCE v6” in the drop-down of the TinyMCE documentation to view the information which is relevant to the TinyMCE version Joomla is using.
 
 ## Example
 
@@ -140,3 +136,9 @@ Please note that we had to set [`style_formats_merge`](https://www.tiny.cloud/do
 Also note that this does not remove the formats pulled in from the `editor.css` file. That's a plugin, not a hard-coded style format.
 
 Finally, the `block_formats` determines what will be shown in the “block elements” drop-down. I removed the heading levels 1 and 2, and I added a `<code>` element which I frequently use when doing technical support of my software.
+
+## Merge Logic
+The given JSON config is merged with the original JSON config:
+- Value nodes are added or replace the original value.
+- Object nodes are merged; each inner node is added or replaced individually.
+- Array nodes replace the original array entirely. If you want to add a new entry, you must repeat the entire array content.

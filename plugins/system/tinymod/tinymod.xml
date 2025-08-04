@@ -7,12 +7,13 @@
 
 <extension type="plugin" group="system" method="update">
     <name>plg_system_tinymod</name>
-    <version>1.0.0</version>
-    <creationDate>2022-12-12</creationDate>
-    <author>Nicholas K. Dionysopoulos</author>
-    <authorEmail>nicholas@dionysopoulos.me</authorEmail>
-    <authorUrl>https://www.dionysopoulos.me</authorUrl>
-    <copyright>Copyright (c)2022-2023 Nicholas K. Dionysopoulos</copyright>
+    <version>2.0.0</version>
+    <creationDate>2025-08-04</creationDate>
+    <author>Markus Bruhn, forked from Nicholas K. Dionysopoulos</author>
+    <authorEmail></authorEmail>
+    <authorUrl>https://github.com/polarius11/joomla_plg_system_tinymod</authorUrl>
+    <copyright>Copyright (c)2022-2023 Nicholas K. Dionysopoulos,
+Copyright (c)2025 Markus Bruhn</copyright>
     <license>GNU GPL v3 or later</license>
     <description>PLG_SYSTEM_TINYMOD_DESCRIPTION</description>
     <namespace path="src">Dionysopoulos\Plugin\System\TinyMod</namespace>
