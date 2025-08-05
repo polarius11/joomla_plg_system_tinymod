@@ -5,7 +5,7 @@
   ~  @license   GNU General Public License version 3, or later
   -->
 
-<extension type="plugin" group="system" method="update">
+<extension type="plugin" group="system" method="upgrade">
     <name>plg_system_tinymod</name>
     <version>2.0.0</version>
     <creationDate>2025-08-04</creationDate>

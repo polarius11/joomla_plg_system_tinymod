@@ -35,11 +35,11 @@ abstract class Json
 		try {
 			$parsed = @json_decode($text);
 		} catch (JsonException $e) {
-			$parsed = null;
+			return $text;
 		}
 
 		if (empty($parsed)) {
-			return '';
+			return $text;
 		}
 
 		return json_encode($parsed, JSON_PRETTY_PRINT);
