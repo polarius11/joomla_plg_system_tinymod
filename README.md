@@ -10,6 +10,12 @@ A system plugin to customise TinyMCE beyond what Joomla lets you do.
 * PHP 7.2 or later, including any PHP 8 version
 * Using Joomla's built-in TinyMCE editor plugin (duh!)
 
+## How to install
+
+1. Download the Repository
+2. Zip the folder plugins\system\tinymod
+3. In Joomla, navigate to Install Extensions and upload the tinymod.zip
+
 ## How it works
 
 Install the plugin and enable it; it appears in the plugins manager as “System - TinyMCE Configuration Modifier”.
