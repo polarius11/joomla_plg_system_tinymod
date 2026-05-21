@@ -7,7 +7,7 @@
 
 <extension type="plugin" group="system" method="upgrade">
     <name>plg_system_tinymod</name>
-    <version>2.0.0</version>
+    <version>2.0.1</version>
     <creationDate>2025-08-04</creationDate>
     <author>Markus Bruhn, forked from Nicholas K. Dionysopoulos</author>
     <authorEmail></authorEmail>

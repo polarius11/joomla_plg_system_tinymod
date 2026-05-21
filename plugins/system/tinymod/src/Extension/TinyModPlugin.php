@@ -48,7 +48,7 @@ class TinyModPlugin extends CMSPlugin implements SubscriberInterface
 	 *
 	 * @since version
 	 */
-	public function onBeforeRender(Event $event): void
+	public function onBeforeRender(): void
 	{
 		// Only applies to front- and backend, when we are going to output an HTML document
 		if (
@@ -69,7 +69,7 @@ class TinyModPlugin extends CMSPlugin implements SubscriberInterface
 		}
 
 
-		// Debug: Ursprüngliche Optionen in Datei schreiben
+		// Debug: Ursprüngliche Optionen in Datei schreiben 
 		//file_put_contents(JPATH_ROOT . '/tmp/tinymce_original.json', json_encode($opts, JSON_PRETTY_PRINT));
 
 
@@ -107,7 +107,7 @@ class TinyModPlugin extends CMSPlugin implements SubscriberInterface
 		$finalOptions = $this->getApplication()->getDocument()->getScriptOptions('plg_editor_tinymce');
 	}
 
-	function mergeJson($original, $override)
+	private function mergeJson($original, $override)
 	{
 		foreach ($override as $key => $value) {
 			if (
@@ -137,7 +137,7 @@ class TinyModPlugin extends CMSPlugin implements SubscriberInterface
 	/**
 	 * Prüft, ob ein Array assoziativ ist (also JSON-Objekt vs. JSON-Array)
 	 */
-	function isAssoc(array $arr): bool
+	private function isAssoc(array $arr): bool
 	{
 		if ([] === $arr) return false;
 		return array_keys($arr) !== range(0, count($arr) - 1);
